@@ -21,7 +21,7 @@ export default function Player({name,symbol, isActive}){
     return(
         <>
             <div> 
-                <li>
+                <li className={isActive ? "border-red-600 border-2 px-1" : undefined}>
                     <span className="player p-2 "> 
                         {editableplayerName}
                         <span className="playerSymbol px-1 border-[1px] border-amber-900 ">{symbol}</span>
