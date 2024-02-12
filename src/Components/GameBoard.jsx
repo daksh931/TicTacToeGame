@@ -1,20 +1,6 @@
-const initialValue = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-];
-export default function GameBoard({onSelectSquare,turns}) {
-    let gameBoard = initialValue;
 
-    
-    for(const turn of turns){
-        // console.log(turn)
-        const{ square, player} = turn;
-        const{row,col} =square;
-
-        //gameBoard initialized with (initial 2D arr of gameboard) now updating particular cell...
-        gameBoard[row][col] = player;
-    }
+export default function GameBoard({onSelectSquare,gameBoard}) {
+ 
     // function handleSelectSquare(rowIndex, colIndex) {
     //     setGameBoard((prevGameBoard) => {
     //         const updatedBoard = [...prevGameBoard.map(innerArr => [...innerArr])];
